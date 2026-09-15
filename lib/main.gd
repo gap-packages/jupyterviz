@@ -453,7 +453,7 @@ DeclareGlobalFunction( "InstallVisualizationTool" );
 #!  parameters <Code>element</Code>, <Code>json</Code>, and
 #!  <Code>callback</Code>, and building the desired visualization inside
 #!  the given DOM element.  Such code often begins with a call to
-#!  <Code>require(['...'],function(library}{/*...*/}))</Code>, but not
+#!  <Code>require(['...'],function(library){/*...*/})</Code>, but not
 #!  always.
 #!  <P/>
 #!  This function will write for you the boilerplate code for calling
@@ -789,10 +789,10 @@ DeclareGlobalFunction( "JUPVIZFetchWithDefault" );
 #! myRec := rec( a := 5 );
 #! myRecs := [ rec( b := 3 ), rec( a := 6 ) ];
 #! f := function ( x ) Print( x, "\n" ); end;
-#! JUPVIZFetchIfPresent( myRec, myRecs, "a", 0, f );       # prints 5
-#! JUPVIZFetchIfPresent( myRec, myRecs, "b", 0, f );       # prints 3
-#! JUPVIZFetchIfPresent( myRec, myRecs, "c", 0, f );       # does nothing
-#! JUPVIZFetchIfPresent( myRec, myRecs, ["a","b"], 0, f ); # does nothing
+#! JUPVIZFetchIfPresent( myRec, myRecs, "a", f );       # prints 5
+#! JUPVIZFetchIfPresent( myRec, myRecs, "b", f );       # prints 3
+#! JUPVIZFetchIfPresent( myRec, myRecs, "c", f );       # does nothing
+#! JUPVIZFetchIfPresent( myRec, myRecs, ["a","b"], f ); # does nothing
 #! @EndLog
 DeclareGlobalFunction( "JUPVIZFetchIfPresent" );
 

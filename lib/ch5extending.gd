@@ -86,7 +86,7 @@
 #! @BeginLog
 #! window.requirejs.config( {
 #!     paths : {
-#!         NEWTOOL : 'https://cdn.example.com/NEWTOOL.min.js'
+#!         NEWTOOL : 'https://cdn.example.com/NEWTOOL.min'
 #!     }
 #! } );
 #! @EndLog
@@ -113,7 +113,7 @@
 #!     // those in whatever way makes sense for your visualization.  Here
 #!     // is an example for an SVG:
 #!     if ( json.width ) result.width = json.width;
-#!     if ( json.height ) result.width = json.height;
+#!     if ( json.height ) result.height = json.height;
 #!     // Then use RequireJS to import your toolkit (which will use the CDN
 #!     // URL you registered above) and use it to fill the element with the
 #!     // desired visualization.  You may or may not need to modify "json"
@@ -274,13 +274,13 @@
 #! # GAP code to install a new visualization tool:
 #! InstallVisualizationTool( "smallExample",
 #! """
-#! window.VisualizationTool.smallExample =
+#! window.VisualizationTools.smallExample =
 #! function ( element, json, callback ) {
-#!     element.innerHTML = '<span color=red>' + json.text + '</span>';
+#!     element.innerHTML = '<span style="color: red">' + json.text + '</span>';
 #!     callback( element, element.childNodes[0] );
 #! }
 #! """
-#! ) );
+#! );
 #!
 #! # GAP code to use that new visualization tool:
 #! CreateVisualization( rec(
@@ -298,10 +298,10 @@
 #! @BeginLog
 #! InstallVisualizationToolFromTemplate( "smallExample",
 #! """
-#!     element.innerHTML = '<span color=red>' + json.text + '</span>';
+#!     element.innerHTML = '<span style="color: red">' + json.text + '</span>';
 #!     callback( element, element.childNodes[0] );
 #! """
-#! ) );
+#! );
 #! @EndLog
 #!
 #! If you provide a third parameter to
@@ -319,7 +319,7 @@
 #!     callback( element, element.childNodes[0] );
 #! """,
 #! "https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"
-#! ) );
+#! );
 #! @EndLog
 #! While RequireJS demands that you omit the <Code>.js</Code> suffix from
 #! such a URL, <Ref Func="InstallVisualizationToolFromTemplate"/>

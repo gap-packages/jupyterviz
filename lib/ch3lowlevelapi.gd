@@ -358,12 +358,12 @@
 #!
 #! @BeginLog
 #! {
-#!     elements : [
-#!         { data : { id : "A" } },
-#!         { data : { id : "B" } },
-#!         { data : { id : "edge", source : "A", target : "B" } }
+#!     "elements" : [
+#!         { "data" : { "id" : "A" } },
+#!         { "data" : { "id" : "B" } },
+#!         { "data" : { "id" : "edge", "source" : "A", "target" : "B" } }
 #!     ],
-#!     layout : { name : "grid", rows : 1 }
+#!     "layout" : { "name" : "grid", "rows" : 1 }
 #! }
 #! @EndLog
 #!

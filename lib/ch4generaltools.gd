@@ -88,7 +88,7 @@
 #! notebook.
 #!
 #! @BeginLog
-#! CreateVisualiation(
+#! CreateVisualization(
 #!     rec(
 #!         tool := "html",
 #!         data := rec(
