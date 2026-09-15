@@ -768,8 +768,7 @@ InstallGlobalFunction( JUPVIZMakePlotGraphRecord, function ( args... )
         end );
         return JUPVIZMakePlotGraphRecord( vertices, args[1], args[2] );
     fi;
-    # If we were given something other than three arguments, something is
-    # wrong.
+    # If we were given more than three arguments, something is wrong.
     if Length( args ) > 3 then
         Error( "Too many arguments given to PlotGraph." );
     fi;
