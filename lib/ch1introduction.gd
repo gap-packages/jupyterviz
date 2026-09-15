@@ -75,7 +75,7 @@
 #!  * <URL Text="Cytoscape">http://www.cytoscape.org/</URL> (the default
 #!    tool used when you call <Ref Func="PlotGraph"/>)
 #!
-#! @Subsection General purpose tools with which you can define custom visualizations
+#! @Subsection General-purpose tools with which you can define custom visualizations
 #!
 #!  * <URL Text="D3">https://d3js.org/</URL>
 #!  * Native HTML <Code>canvas</Code> element

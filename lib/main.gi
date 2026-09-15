@@ -90,7 +90,7 @@ InstallGlobalFunction( RunJavaScript, function ( script, returnHTML... )
         if ( not IsBoundGlobal( "JupyterRenderable" ) ) then
             Error( "The JupyterKernel package is required for this feature." );
         fi;
-        # The output element in the notebook will be passed called "element" in
+        # The output element in the notebook will be called "element" in
         # the script's environment, which we capture with the closure wrapper
         # below, so that any callbacks or asynchronous code can rely on its having
         # that name indefinitely.

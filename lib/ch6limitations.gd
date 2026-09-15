@@ -5,8 +5,8 @@
 #! following limitations.
 #!
 #!  * If this package is used in <Code>PlotDisplayMethod_Jupyter</Code>
-#!    mode in a Jupyter notebook, and visualizations are created by this
-#!    package, then the notebook is saved and later reloaded, the
+#!    mode in a Jupyter notebook, and a notebook containing visualizations
+#!    created by this package is saved and later reloaded, the
 #!    visualizations will not persist.  They will be replaced by an error
 #!    message instructing the user to re-run the cell that created the
 #!    visualization.  You can get around this by setting

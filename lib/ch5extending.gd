@@ -10,7 +10,7 @@
 #! may be invented after this package is created, and you wish to add it to
 #! the package.
 #!
-#! There are two supported way to do this.  First, for tools that you wish
+#! There are two supported ways to do this.  First, for tools that you wish
 #! to be available to all users of this package, you can alter the package
 #! code itself to include the tool.  (Then please create a pull request so
 #! that your work might be shared with other &GAP; users in a subsequent
@@ -26,7 +26,7 @@
 #! Begin by gathering the following information.
 #!  * A URL on the internet that serves the JavaScript code defining the new
 #!    visualization tool you wish to add.  For instance, the ChartJS library
-#!    is imported from CloudFlare, at
+#!    is imported from Cloudflare, at
 #!    <URL>https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js</URL>.
 #!    It is best if you have this URL from a Content Delivery Network (CDN)
 #!    to ensure very high availability.  This URL may not be necessary in
@@ -38,7 +38,7 @@
 #!    the final <Code>.js</Code> suffix at the end.
 #!  * Knowledge of how to write a short JavaScript function that can embed
 #!    the given tool into any given DOM <Code>Element</Code>.  For many
-#!    tools, this is just a single call to the main class's contructor or
+#!    tools, this is just a single call to the main class's constructor or
 #!    the library's initialization function.  Or, if you haven't imported
 #!    any library that constructs the visualization for you, then this
 #!    function may be more extensive, as you construct the visualization
@@ -63,7 +63,7 @@
 #!
 #! If instead you wish to install a new visualization at runtime for just
 #! your own use in a particular project (or in a package that depends on
-#! this one), refer to the instructions in the Section
+#! this one), refer to the instructions in Section
 #! <Ref Sect="Section_runtime_extend"/> instead.
 #!
 #! Throughout these steps, I will assume that the name of the new tool you
@@ -133,15 +133,15 @@
 #! </Item>
 #!   <Item>Optionally, in the <File>lib/js/</File> folder, run the
 #!     <File>minify-all-scripts.sh</File> script, which compresses your
-#!     JavaScript code to save on data transfer, memory     allocation,
+#!     JavaScript code to save on data transfer, memory allocation,
 #!     and parsing time.  Rerun that script each time you change your file
 #!     as well.</Item>
 #!   <Item>You should now be able to use your new visualization tool in
 #!     &GAP;.  Verify that your changes worked, and debug as necessary.
-#!     If you are testing in a Jupyter Notebook, you may be able to notice
-#!     the change only if you refresh in your  browser the page containing
-#!     notebook and also restart the &GAP; kernel in that same page.  Then
-#!     try code like the following to test what you've done.
+#!     If you are testing in a Jupyter Notebook, you may see the change only
+#!     after reloading the notebook page in your browser and restarting its
+#!     &GAP; kernel.  Then try code like the following to test what you've
+#!     done.
 #! @BeginLog
 #! CreateVisualization( rec(
 #!     tool := "NEWTOOL",
@@ -209,9 +209,9 @@
 #!     included in the default distribution.</Item>
 #! </Enum>
 #!
-#! A complete and working (but silly) example follows.  It is a tiny enough
-#! visualization tool that it cannot support either plotting data nor
-#! drawing graphs, so we don't have to install high-level API support.
+#! A complete and working (but silly) example follows.  It is so small a
+#! visualization tool that it supports neither plotting data nor drawing
+#! graphs, so we don't have to install high-level API support.
 #!
 #! This portion would go in <File>lib/js/viz-tool-color.js</File>:
 #!
@@ -262,10 +262,9 @@
 #! <Code>window.VisualizationTool</Code> of a function that uses that tool
 #! to create a visualization from a given JSON object.
 #!
-#! If you have all of this JavaScript code already stored in a single GAP
-#! string (or in a file that you can load into a string), call it
-#! <Code>S</Code>, then you can install it into this package with a single
-#! function call, like so:
+#! If you have all of this JavaScript code stored in a single &GAP; string
+#! <Code>S</Code> (perhaps loaded from a file), you can install it into this
+#! package with a single function call, like so:
 #! @BeginLog
 #! InstallVisualizationTool( "TOOL_NAME_HERE", S );
 #! @EndLog
@@ -305,7 +304,7 @@
 #! ) );
 #! @EndLog
 #!
-#! If you provide a third parametr to
+#! If you provide a third parameter to
 #! <Ref Func="InstallVisualizationToolFromTemplate"/>, it is treated as the
 #! CDN URL for an external library, and code is automatically inserted that
 #! installs that external library into RequireJS and wraps the tool's
@@ -323,8 +322,8 @@
 #! ) );
 #! @EndLog
 #! While RequireJS demands that you omit the <Code>.js</Code> suffix from
-#! such an URL, <Ref Func="InstallVisualizationToolFromTemplate"/> will
-#! automatically remove it for you if you forget to remove it.
+#! such a URL, <Ref Func="InstallVisualizationToolFromTemplate"/>
+#! removes it for you if you include it.
 #!
 #! After using either of those two methods, if the new visualization tool
 #! is capable of drawing either plots or graphs, and you wish to expose it

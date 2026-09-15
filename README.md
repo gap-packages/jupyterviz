@@ -17,7 +17,7 @@ existing JavaScript visualization libraries into the notebook as needed,
 based on the kind of visualization requested by the GAP code.
 
 Outside of the notebook, a visualization command creates a temporary HTML
-file with the Javascript code and JSON data needed to build the
+file with the JavaScript code and JSON data needed to build the
 visualization, then displays it using the system default web browser.
 
 The architecture of the package is such that additional JavaScript

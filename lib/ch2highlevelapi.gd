@@ -322,7 +322,7 @@
 #!     HTML color, such as "#ccc" or "red".</Item>
 #!   <Item><Code>directed</Code> - a boolean defaulting to false,
 #!     whether to draw arrows to visually indicate that the graph is
-#!     a directed graph</Item>
+#!     a directed graph.</Item>
 #!   <Item><Code>arrowscale</Code> - a multiplier to increase or
 #!     decrease the size of arrows in a directed graph.</Item>
 #!   <Item><Code>height</Code> - the height in pixels of the

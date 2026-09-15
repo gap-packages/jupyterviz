@@ -27,7 +27,7 @@
 #!
 #! There are a few techniques for taking a call to the high-level API
 #! (either to <Ref Func="Plot"/> or <Ref Func="PlotGraph"/>) and computing
-#! what data it eventally passes to <Ref Func="CreateVisualization"/>.  This
+#! what data it eventually passes to <Ref Func="CreateVisualization"/>.  This
 #! is a great starting point for learning the data formats that
 #! <Ref Func="CreateVisualization"/> expects, in preparation for either
 #! tweaking them or creating them from scratch.  We cover two examples here.
@@ -104,12 +104,12 @@
 #!
 #! @Subsection Looking beneath <Code>PlotGraph</Code>
 #!
-#! In the previous section, we saw how you could take a call to
+#! In the previous subsection, we saw how you could take a call to
 #! <Ref Func="Plot"/> and find out what data that call would pass to
 #! <Ref Func="CreateVisualization"/>.  You can do the same with
 #! <Ref Func="PlotGraph"/>, but it takes a few more steps.
 #!
-#! First, we you must have a list of your graph's vertices.  Here we will
+#! First, you must have a list of your graph's vertices.  Here we will
 #! assume it is in a variable called <Code>vertices</Code>.  Second, you
 #! must have a list of your graph's edges.  Similarly, we will assume it is
 #! in a variable called <Code>edges</Code>.
@@ -393,7 +393,7 @@
 #! We then need to choose a layout algorithm.  The Cytoscape documentation
 #! suggests that the "cose" layout works well as a force-directed layout.
 #! Here, we do choose a height (in pixels) for the result, because
-#! Cytoscape does not automaticlly resize visualizations to fit their
+#! Cytoscape does not automatically resize visualizations to fit their
 #! containing HTML element.  We also set the style for each node to display
 #! its ID (which is the integer associated with it).
 #!

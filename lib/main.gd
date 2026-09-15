@@ -48,7 +48,7 @@
 #!      values are 1, 2, 3, and so on up to the length of <Code>Y</Code>.
 #!      It then plots the corresponding set of ordered pairs.</Item>
 #!    <Item>If <Code>f</Code> is a &GAP; function then <Code>Plot(f)</Code>
-#!      assumes that <Code>f</Code> requiers integer inputs and evaluates it
+#!      assumes that <Code>f</Code> requires integer inputs and evaluates it
 #!      on a small domain (1 through 5) of <Math>x</Math> values and plots
 #!      the resulting <Math>(x,y)</Math> pairs.</Item>
 #!    <Item>In any of the cases above, a new, last argument may be added
@@ -133,7 +133,7 @@ DeclareGlobalFunction( "Plot" );
 #!  discussed in Chapter <Ref Chap="Chapter_extend"/>) will want
 #!  to install a new function in this object corresponding to the new tool.
 #!  If you plan to do so, consider the source code for the existing
-#!  conversion functions, which makes use of two useful convenince methods,
+#!  conversion functions, which makes use of two useful convenience functions,
 #!  <Ref Func="JUPVIZFetchWithDefault"/> and
 #!  <Ref Func="JUPVIZFetchIfPresent"/>.  Following those examples will
 #!  help keep your code consistent with existing code and as concise as
@@ -166,7 +166,7 @@ DeclareGlobalFunction( "Plot" );
 #!      function then <Code>PlotGraph(V,R)</Code> treats <Code>V</Code> as
 #!      the vertex set and calls <Code>R(v1,v2)</Code> for every pair of
 #!      vertices (in both orders) to test whether there is an edge
-#!      between them.  It exepcts <Code>R</Code> to return
+#!      between them.  It expects <Code>R</Code> to return
 #!      boolean values.</Item>
 #!    <Item>If <Code>E</Code> is a list of pairs then
 #!      <Code>PlotGraph(E)</Code> treats <Code>E</Code> as a list of edges,
@@ -254,7 +254,7 @@ DeclareGlobalFunction( "PlotGraph" );
 #!  discussed in Chapter <Ref Chap="Chapter_extend"/>) will want
 #!  to install a new function in this object corresponding to the new tool.
 #!  If you plan to do so, consider the source code for the existing
-#!  conversion functions, which makes use of two useful convenince methods,
+#!  conversion functions, which makes use of two useful convenience functions,
 #!  <Ref Func="JUPVIZFetchWithDefault"/> and
 #!  <Ref Func="JUPVIZFetchIfPresent"/>.  Following those examples will
 #!  help keep your code consistent with existing code and as concise as
@@ -273,7 +273,7 @@ DeclareGlobalFunction( "PlotGraph" );
 #!  variable because a sensible default is chosen at package loading time.
 #!  If the <Package>JupyterViz</Package> Package is loaded after the
 #!  <Package>JupyterKernel</Package> Package, it notices the presence of
-#!  that package and leverage its tools to set up support for plotting in a
+#!  that package and leverages its tools to set up support for plotting in a
 #!  Jupyter environment.  Furthermore, it will initialize
 #!  <Ref Var="PlotDisplayMethod"/> to
 #!  <Ref Var="PlotDisplayMethod_Jupyter"/>, which is probably what the user
@@ -388,7 +388,7 @@ DeclareGlobalFunction( "PlotGraph" );
 #!  open a web browser, but just wants the HTML content that would have been
 #!  displayed in such a browser returned as a string instead.
 #!  <P/>
-#!  When the given code is run, the varible <Code>element</Code> will be
+#!  When the given code is run, the variable <Code>element</Code> will be
 #!  defined in its environment, and will contain either the output element
 #!  in the Jupyter notebook corresponding to the code that was just
 #!  evaluated or, in the case outside of Jupyter, the HTML element mentioned
@@ -456,7 +456,7 @@ DeclareGlobalFunction( "InstallVisualizationTool" );
 #!  <Code>require(['...'],function(library}{/*...*/}))</Code>, but not
 #!  always.
 #!  <P/>
-#!  This function will write for you the boiler plate code for calling
+#!  This function will write for you the boilerplate code for calling
 #!  <Code>window.requirejs.config</Code> and the declaration and
 #!  installation of a function into
 #!  <Code>window.VisualizationTools.TOOL_NAME_HERE</Code>.  You provide the
@@ -551,7 +551,7 @@ DeclareGlobalFunction( "JUPVIZAbsoluteJavaScriptFilename" );
 #!  <P/>
 #!  This function loads the file specified by <Arg>filename</Arg> by passing
 #!  that argument directly to <Ref Func="LoadJavaScriptFile"/>.  If no such
-#!  file exists, returns <Keyword>fail</Keyword>.  Otherwise, it proceed as
+#!  file exists, returns <Keyword>fail</Keyword>.  Otherwise, it proceeds as
 #!  follows.
 #!  <P/>
 #!  For each key-value pair in the given <Arg>dictionary</Arg>, prefix a
@@ -604,7 +604,7 @@ DeclareGlobalFunction( "JUPVIZRunJavaScriptUsingRunGAP" );
 #!  <Arg>jsCode</Arg>.  It then calls <Ref Func="RunJavaScript"/> on the
 #!  result, to form a web page and display it to the user.
 #!  <P/>
-#!  There are a set of JavaScript libraries stored in the
+#!  There is a set of JavaScript libraries stored in the
 #!  <File>lib/js/</File> subfolder of this package's installation folder.
 #!  Neither the Jupyter notebook nor the temporary HTML files created from
 #!  the command line know, by default, about any of those libraries.  Thus
