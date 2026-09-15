@@ -131,9 +131,6 @@ Persons := [
 ##  Web page. Please use '<span class="pkgname">GAP</span>' for GAP and
 ##  '<span class="pkgname">MyPKG</span>' for specifying package names.
 ##
-# AbstractHTML := "This package provides  a collection of functions for \
-# computing the Smith normal form of integer matrices and some related \
-# utilities.",
 AbstractHTML :=
   "The <span class=\"pkgname\">JupyterViz</span> package \
    adds visualization tools for use in Jupyter Notebooks \
