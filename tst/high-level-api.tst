@@ -25,22 +25,22 @@ gap> JUPVIZMakePlotDataSeries( [4/5,-0.99,123.456] );
 rec( options := rec(), x := [1..3], y := [4/5,-0.99,123.456] )
 
 # 5. A function (with small integers filled in for xs).
-gap> JUPVIZMakePlotDataSeries( NrSmallGroups );
-rec( options := rec(), x := [1,2,3,4,5], y := [1,1,1,2,1] )
+gap> JUPVIZMakePlotDataSeries( NrPartitions );
+rec( options := rec(), x := [1,2,3,4,5], y := [1,2,3,5,7] )
 
 ##
 # Data series are supposed to be able to be converted into the formats
 # required by different visualization tools:
 ##
 
-gap> tmp := JUPVIZMakePlotDataSeries( NrSmallGroups );;
+gap> tmp := JUPVIZMakePlotDataSeries( NrPartitions );;
 gap> ConvertDataSeriesForTool.plotly( [ tmp ] );
 rec(
   data := [
     rec(
       type := "line",
       x := [ 1, 2, 3, 4, 5 ],
-      y := [ 1, 1, 1, 2, 1 ]
+      y := [ 1, 2, 3, 5, 7 ]
     )
   ],
   layout := rec( height := 400 )
@@ -49,7 +49,7 @@ rec(
 gap> ConvertDataSeriesForTool.chartjs( [ tmp ] );
 rec(
   data := rec(
-    datasets := [ rec( data := [ 1, 1, 1, 2, 1 ] ) ],
+    datasets := [ rec( data := [ 1, 2, 3, 5, 7 ] ) ],
     labels := [ 1, 2, 3, 4, 5 ]
   ),
   options := rec(  ),
@@ -63,10 +63,10 @@ rec(
     rec(
       dataPoints := [
         rec( x := 1, y := 1 ),
-        rec( x := 2, y := 1 ),
-        rec( x := 3, y := 1 ),
-        rec( x := 4, y := 2 ),
-        rec( x := 5, y := 1 )
+        rec( x := 2, y := 2 ),
+        rec( x := 3, y := 3 ),
+        rec( x := 4, y := 5 ),
+        rec( x := 5, y := 7 )
       ],
       type := "line"
     )
@@ -82,10 +82,10 @@ rec(
       rec(
         data := [
           rec( value := 1, x := 1 ),
-          rec( value := 1, x := 2 ),
-          rec( value := 1, x := 3 ),
-          rec( value := 2, x := 4 ),
-          rec( value := 1, x := 5 )
+          rec( value := 2, x := 2 ),
+          rec( value := 3, x := 3 ),
+          rec( value := 5, x := 4 ),
+          rec( value := 7, x := 5 )
         ],
         seriesType := "line"
       )
@@ -101,7 +101,7 @@ rec(
     rec(
       type := "bar",
       x := [ 1, 2, 3, 4, 5 ],
-      y := [ 1, 1, 1, 2, 1 ]
+      y := [ 1, 2, 3, 5, 7 ]
     )
   ],
   layout := rec( height := 400 )
@@ -111,7 +111,7 @@ gap> tmp.options := rec( title := "Hello" );;
 gap> ConvertDataSeriesForTool.chartjs( [ tmp ] );
 rec(
   data := rec(
-    datasets := [ rec( data := [ 1, 1, 1, 2, 1 ] ) ],
+    datasets := [ rec( data := [ 1, 2, 3, 5, 7 ] ) ],
     labels := [ 1, 2, 3, 4, 5 ]
   ),
   options := rec( title := rec( display := true, text := "Hello" ) ),
@@ -128,10 +128,10 @@ rec(
     rec(
       dataPoints := [
         rec( x := 1, y := 1 ),
-        rec( x := 2, y := 1 ),
-        rec( x := 3, y := 1 ),
-        rec( x := 4, y := 2 ),
-        rec( x := 5, y := 1 )
+        rec( x := 2, y := 2 ),
+        rec( x := 3, y := 3 ),
+        rec( x := 4, y := 5 ),
+        rec( x := 5, y := 7 )
       ],
       type := "line"
     )
@@ -148,10 +148,10 @@ rec(
       rec(
         data := [
           rec( value := 1, x := 1 ),
-          rec( value := 1, x := 2 ),
-          rec( value := 1, x := 3 ),
-          rec( value := 2, x := 4 ),
-          rec( value := 1, x := 5 )
+          rec( value := 2, x := 2 ),
+          rec( value := 3, x := 3 ),
+          rec( value := 5, x := 4 ),
+          rec( value := 7, x := 5 )
         ],
         seriesType := "line"
       )
