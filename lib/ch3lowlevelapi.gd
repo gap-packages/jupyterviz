@@ -272,14 +272,14 @@
 #!  * <Code>canvasjs</Code>'s JSON data format is given here:<P/>
 #!    <URL>https://canvasjs.com/docs/charts/chart-types/</URL>
 #!  * <Code>chartjs</Code>'s JSON data format is given here:<P/>
-#!        <URL>http://www.chartjs.org/docs/latest/getting-started/usage.html</URL>
+#!        <URL>https://www.chartjs.org/docs/2.7.2/getting-started/usage.html</URL>
 #!  * <Code>plotly</Code>'s JSON data format is given here:<P/>
-#!        <URL>https://plot.ly/javascript/plotlyjs-function-reference/#plotlynewplot</URL>
+#!        <URL>https://plotly.com/javascript/plotlyjs-function-reference/#plotlynewplot</URL>
 #!
 #! @Subsection Graph drawing tools
 #!
 #!  * <Code>cytoscape</Code>'s JSON data format is given here:<P/>
-#!    <URL>http://js.cytoscape.org/#notation/elements-json</URL>
+#!    <URL>https://js.cytoscape.org/#notation/elements-json</URL>
 #!
 #! @Subsection General-purpose tools for custom visualizations
 #!
@@ -291,7 +291,7 @@
 #!    that element thereafter, using arbitrary JavaScript included in
 #!    the <Arg>code</Arg> parameter.  It does not support creating charts
 #!    from JSON input only, but its full documentation appears here:
-#!    <URL>https://github.com/d3/d3/wiki</URL>
+#!    <URL>https://github.com/d3/d3/blob/v5.16.0/API.md</URL>
 #!  * <Code>html</Code> fills the output element with arbitrary
 #!    HTML, which the caller should provide as a string in the
 #!    <Code>html</Code> field of <Arg>data</Arg>, as shown in Section

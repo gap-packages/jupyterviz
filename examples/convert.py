@@ -5,7 +5,7 @@
 # contents of the markdown document.
 
 # It is essentially a baby version of jupytext
-# (https://github.com/mwouts/jupytext) but I couldn't get that
+# (https://github.com/jupytext/jupytext) but I couldn't get that
 # project to do what I wanted; it didn't seem to support GAP.
 
 # This package uses this tool to create .ipynb files that can
