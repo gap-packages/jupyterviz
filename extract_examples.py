@@ -105,7 +105,7 @@ def write_all ():
     outf.close()
 
 # Use the above functions on lib/*.gd
-for fname in os.listdir( "lib" ):
+for fname in sorted( os.listdir( "lib" ) ):
     if fname[-3:] == ".gd":
         process_file( "lib/" + fname )
 write_all()
