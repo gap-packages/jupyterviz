@@ -32,7 +32,7 @@
 #! )
 #! @EndLog
 #!
-#! This holds for any visualization tool, not just AnyChart.  In the code
+#! This works with any visualization tool.  In the code
 #! given in the second parameter, two variables will be defined for your
 #! use: <Code>element</Code> refers to the HTML element inside of which the
 #! visualization was built and <Code>visualization</Code> refers to the
@@ -96,7 +96,7 @@
 #!         )
 #!     ),
 #!     """
-#!     // Here you could install event handlers on tools created above.
+#!     // Here you could install event handlers on elements created above.
 #!     // For example, if you had created a button with id="myButton":
 #!     var button = document.getElementById( "myButton" );
 #!     button.addEventListener( "click", function () {

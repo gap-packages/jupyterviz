@@ -300,8 +300,8 @@
 #! The options record passed as the final parameter to
 #! <Ref Func="PlotGraph"/> can have the following entries.
 #! <List>
-#!   <Item><Code>tool</Code> - the visualization tool to use to make
-#!     the plot, as a string.  The default is "cytoscape".  The full
+#!   <Item><Code>tool</Code> - the visualization tool to use to draw
+#!     the graph, as a string.  The default is "cytoscape".  The full
 #!     list of tools is available in Section
 #!     <Ref Sect="Section_term"/>.</Item>
 #!   <Item><Code>layout</Code> - the name of the layout algorithm to

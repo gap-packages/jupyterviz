@@ -168,7 +168,7 @@
 #!     the type of data users provide to <Ref Func="Plot"/> or
 #!     <Ref Func="PlotGraph"/> into the type of data used by
 #!     <Ref Func="CreateVisualization"/>.</Item>
-#!   <Item>Edit the <File>main.gi</File> file in this package.  Find the
+#!   <Item>Edit the <File>lib/main.gi</File> file in this package.  Find the
 #!     section in which new elements are added to the
 #!     <Ref Func="ConvertDataSeriesForTool"/> or
 #!     <Ref Func="ConvertGraphForTool"/> records.  Add a new section of
@@ -259,7 +259,7 @@
 #! The previous section thoroughly documents the two types of code that are
 #! likely to show up in the definition of a new tool: the installation into
 #! RequireJS of the tool's CDN URL and the installation into
-#! <Code>window.VisualizationTool</Code> of a function that uses that tool
+#! <Code>window.VisualizationTools</Code> of a function that uses that tool
 #! to create a visualization from a given JSON object.
 #!
 #! If you have all of this JavaScript code stored in a single &GAP; string

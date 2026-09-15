@@ -17,7 +17,7 @@
 #! attach actions to the elements of these charts, which result in
 #! callbacks to &GAP; that can update the visualization.
 #!
-#! This visualization package has different aims in three ways.  First, it
+#! This package differs from <Package>francy</Package> in three ways.  First, it
 #! can function either in a Jupyter notebook or directly from the &GAP;
 #! REPL on the command line.  Second, it aims to make a wider variety of
 #! visualizations accessible to &GAP; users.  Third, it does not provide
