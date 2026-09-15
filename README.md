@@ -1,5 +1,5 @@
-[![CI](https://github.com/nathancarter/jupyterviz/actions/workflows/CI.yml/badge.svg)](https://github.com/nathancarter/jupyterviz/actions/workflows/CI.yml)
-[![Code Coverage](https://codecov.io/github/nathancarter/jupyterviz/coverage.svg?branch=master&token=)](https://codecov.io/gh/nathancarter/jupyterviz)
+[![CI](https://github.com/gap-packages/jupyterviz/actions/workflows/CI.yml/badge.svg)](https://github.com/gap-packages/jupyterviz/actions/workflows/CI.yml)
+[![Code Coverage](https://codecov.io/github/gap-packages/jupyterviz/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/jupyterviz)
 
 # The Jupyter Notebook Visualization Package
 
@@ -27,11 +27,11 @@ visualization libraries can be added easily.
 
 The package does not need to be compiled.
 
-See the manual on [the package website](http://nathancarter.github.io/jupyterviz),
+See the manual on [the package website](https://gap-packages.github.io/jupyterviz),
 which contains many usage examples.
 
 Or experiment with a live Jupyter notebook on Binder:
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nathancarter/jupyterviz/master?filepath=inst%2Fgap-4.10.0%2Fpkg%2Fjupyterviz%2F).
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/gap-packages/jupyterviz/master?filepath=inst%2Fgap-4.10.0%2Fpkg%2Fjupyterviz%2F).
 (It can be a long loading time, so have patience!)
 
 ## Maintainer
