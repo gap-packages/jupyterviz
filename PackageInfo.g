@@ -79,7 +79,6 @@ SourceRepository := rec( Type := "git",
                          URL  := Concatenation( "https://github.com/gap-packages/",
                                                 LowercaseString( ~.PackageName ) ) ),
 IssueTrackerURL  := Concatenation( ~.SourceRepository.URL, "/issues" ),
-SupportEmail     := "ncarter@bentley.edu",
 README_URL       := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL   := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 
@@ -107,7 +106,7 @@ Persons := [
     FirstNames    := "Nathan",
     LastName      := "Carter",
     IsAuthor      := true,
-    IsMaintainer  := true,
+    IsMaintainer  := false,
     Email         := "ncarter@bentley.edu",
     WWWHome       := "http://nathancarter.github.io",
     PostalAddress := Concatenation( [
@@ -116,7 +115,14 @@ Persons := [
                        "USA" ] ),
     Place         := "Waltham",
     Institution   := "Bentley University"
-  )
+  ),
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 
 
