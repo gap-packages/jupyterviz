@@ -5,7 +5,7 @@
 #! @SectionLabel purpose
 #!
 #! Since 2017, it has been possible to use &GAP; in
-#! <URL Text="Jupyter">http://jupyter.org/</URL> through the
+#! <URL Text="Jupyter">https://jupyter.org/</URL> through the
 #! <Package>JupyterKernel</Package> package.  Output was limited to the
 #! ordinary text output &GAP; produces; charts and graphs were not possible.
 #!
@@ -17,7 +17,7 @@
 #! attach actions to the elements of these charts, which result in
 #! callbacks to &GAP; that can update the visualization.
 #!
-#! This visualization package has different aims in three ways.  First, it
+#! This package differs from <Package>francy</Package> in three ways.  First, it
 #! can function either in a Jupyter notebook or directly from the &GAP;
 #! REPL on the command line.  Second, it aims to make a wider variety of
 #! visualizations accessible to &GAP; users.  Third, it does not provide
@@ -67,15 +67,15 @@
 #!  * <URL Text="AnyChart">https://www.anychart.com/</URL>
 #!  * <URL Text="CanvasJS">https://canvasjs.com/</URL>
 #!  * <URL Text="ChartJS">https://www.chartjs.org/</URL>
-#!  * <URL Text="Plotly">https://plot.ly/</URL> (the default tool used when
+#!  * <URL Text="Plotly">https://plotly.com/javascript/</URL> (the default tool used when
 #!    you call <Ref Func="Plot"/>)
 #!
 #! @Subsection Toolkits for drawing graphs
 #!
-#!  * <URL Text="Cytoscape">http://www.cytoscape.org/</URL> (the default
+#!  * <URL Text="Cytoscape">https://js.cytoscape.org/</URL> (the default
 #!    tool used when you call <Ref Func="PlotGraph"/>)
 #!
-#! @Subsection General purpose tools with which you can define custom visualizations
+#! @Subsection General-purpose tools with which you can define custom visualizations
 #!
 #!  * <URL Text="D3">https://d3js.org/</URL>
 #!  * Native HTML <Code>canvas</Code> element
