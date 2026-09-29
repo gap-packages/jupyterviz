@@ -36,7 +36,10 @@ Or experiment with a live Jupyter notebook on Binder:
 
 ## Maintainer
 
- * Nathan Carter
+JupyterViz was written by Nathan Carter and is now maintained by the GAP
+Team. Please report bugs and feature requests via the
+[issue tracker](https://github.com/gap-packages/jupyterviz/issues)
+rather than contacting the original author.
 
 This GAP package is free software; you can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the Free
