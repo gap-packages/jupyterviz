@@ -135,11 +135,8 @@ Persons := [
 ##  Provide a short (up to a few lines) abstract in HTML format, explaining
 ##  the package content. This text will be displayed on the package overview
 ##  Web page. Please use '<span class="pkgname">GAP</span>' for GAP and
-##  '<span class="pkgname">MyPKG</span>' for specifing package names.
+##  '<span class="pkgname">MyPKG</span>' for specifying package names.
 ##
-# AbstractHTML := "This package provides  a collection of functions for \
-# computing the Smith normal form of integer matrices and some related \
-# utilities.",
 AbstractHTML :=
   "The <span class=\"pkgname\">JupyterViz</span> package \
    adds visualization tools for use in Jupyter Notebooks \

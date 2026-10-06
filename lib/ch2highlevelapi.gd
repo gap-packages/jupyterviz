@@ -300,8 +300,8 @@
 #! The options record passed as the final parameter to
 #! <Ref Func="PlotGraph"/> can have the following entries.
 #! <List>
-#!   <Item><Code>tool</Code> - the visualization tool to use to make
-#!     the plot, as a string.  The default is "cytoscape".  The full
+#!   <Item><Code>tool</Code> - the visualization tool to use to draw
+#!     the graph, as a string.  The default is "cytoscape".  The full
 #!     list of tools is available in Section
 #!     <Ref Sect="Section_term"/>.</Item>
 #!   <Item><Code>layout</Code> - the name of the layout algorithm to
@@ -322,7 +322,7 @@
 #!     HTML color, such as "#ccc" or "red".</Item>
 #!   <Item><Code>directed</Code> - a boolean defaulting to false,
 #!     whether to draw arrows to visually indicate that the graph is
-#!     a directed graph</Item>
+#!     a directed graph.</Item>
 #!   <Item><Code>arrowscale</Code> - a multiplier to increase or
 #!     decrease the size of arrows in a directed graph.</Item>
 #!   <Item><Code>height</Code> - the height in pixels of the

@@ -5,7 +5,7 @@
 # contents of the markdown document.
 
 # It is essentially a baby version of jupytext
-# (https://github.com/mwouts/jupytext) but I couldn't get that
+# (https://github.com/jupytext/jupytext) but I couldn't get that
 # project to do what I wanted; it didn't seem to support GAP.
 
 # This package uses this tool to create .ipynb files that can
@@ -13,13 +13,12 @@
 # Those files are written in this folder, and must be manually
 # loaded and the visualizations manually saved.
 
-# It also creates a .gd file that can be included in the manual.
-# It is a chapter that lists all the examples in this folder,
-# and is written to the ../lib/ folder with a filename that
-# inserts it as the last chapter in the manual.  It assumes that
-# the manually saved visualization files (one per notebook) have
-# been saved as notebookname.png and copied into the ../lib/
-# folder, so that they can be referenced in this documentation.
+# It also creates, for each example, a .gd file in the ../lib/
+# folder that adds that example as a section of an "Examples"
+# chapter in the manual.  It assumes that the manually saved
+# visualization files (one per notebook) have been saved as
+# notebookname.png in the ../doc/ folder, so that they can be
+# referenced in this documentation.
 
 import sys
 import json

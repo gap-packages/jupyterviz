@@ -3,7 +3,7 @@
 
 We can improve the previous example by removing the edges from
 each subgroup to itself.  We do so by redefining our edge relation
-to exclude nonproper inclusions.
+to exclude improper inclusions.
 
 We can improve it further by making the edges directed and the
 layout try to respect the graph's structure.  We do so by passing

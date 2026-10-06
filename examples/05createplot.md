@@ -47,7 +47,7 @@ you could alter the record yourself before passing it on to
 
 Such options may be specific to the tool you've chosen, and are
 not guaranteed to work with other tools.  For example, you can't
-change `"canvasjs"` to `"anychart"` and expect all the
+change `"canvasjs"` to `"anychart"` and expect the
 `animationEnabled` setting to work.
 
 If you had researched other options about CanvasJS and wanted to

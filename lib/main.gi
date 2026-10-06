@@ -90,7 +90,7 @@ InstallGlobalFunction( RunJavaScript, function ( script, returnHTML... )
         if ( not IsBoundGlobal( "JupyterRenderable" ) ) then
             Error( "The JupyterKernel package is required for this feature." );
         fi;
-        # The output element in the notebook will be passed called "element" in
+        # The output element in the notebook will be called "element" in
         # the script's environment, which we capture with the closure wrapper
         # below, so that any callbacks or asynchronous code can rely on its having
         # that name indefinitely.
@@ -768,8 +768,7 @@ InstallGlobalFunction( JUPVIZMakePlotGraphRecord, function ( args... )
         end );
         return JUPVIZMakePlotGraphRecord( vertices, args[1], args[2] );
     fi;
-    # If we were given something other than three arguments, something is
-    # wrong.
+    # If we were given more than three arguments, something is wrong.
     if Length( args ) > 3 then
         Error( "Too many arguments given to PlotGraph." );
     fi;
