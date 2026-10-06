@@ -58,8 +58,7 @@ Keywords := [
 Dependencies := rec(
   GAP := ">= 4.10",
   NeededOtherPackages := [
-    [ "json",          "2.0.0"   ],
-    [ "GAPDoc",        "1.3"     ]
+    [ "json",          "2.0.0"   ]
   ],
   SuggestedOtherPackages := [ ],
   # the test suite exercises the Jupyter integration, which needs a kernel
