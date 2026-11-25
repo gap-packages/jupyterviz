@@ -33,9 +33,7 @@
 #!    all cases.  For instance, perhaps the new visualization tool you wish
 #!    to install can be defined using the basic JavaScript features in all
 #!    browsers, or is imported via an <Code>iframe</Code> rather
-#!    than as a script in the page itself.  If you choose to use such
-#!    a URL, it will be imported using RequireJS, which expects you to omit
-#!    the final <Code>.js</Code> suffix at the end.
+#!    than as a script in the page itself. 
 #!  * Knowledge of how to write a short JavaScript function that can embed
 #!    the given tool into any given DOM <Code>Element</Code>.  For many
 #!    tools, this is just a single call to the main class's constructor or
@@ -56,6 +54,9 @@
 #! @Section Extending this package with a new tool
 #! @SectionLabel extending
 #!
+#! NOTE: Since this section was written requirejs has been replaced with 
+#!       LoadScript(). As such, it may be out of date.
+#!
 #! This section explains how to enhance this package itself.  If you follow
 #! these instructions, you should submit a pull request to have your work
 #! added to the main repository for the package, and thus eventually
@@ -71,7 +72,6 @@
 #! to make it stand out, so that you can tell where you need to fill in
 #! blanks in the examples, but you should probably use lower-case letters,
 #! to match the convention used by all of the built-in tools.
-#!
 #! <Enum>
 #!   <Item>Clone the repository for this package.</Item>
 #!   <Item>Enter the <File>lib/js/</File> folder in the repository.</Item>
@@ -114,21 +114,19 @@
 #!     // is an example for an SVG:
 #!     if ( json.width ) result.width = json.width;
 #!     if ( json.height ) result.height = json.height;
-#!     // Then use RequireJS to import your toolkit (which will use the CDN
+#!     // Then use the loadScript() function to import your toolkit (which will use the CDN
 #!     // URL you registered above) and use it to fill the element with the
 #!     // desired visualization.  You may or may not need to modify "json"
 #!     // before passing it to your toolkit; this is up to the conventions
 #!     // you choose to establish.
-#!     require( [ 'NEWTOOL' ], function ( NEWTOOL ) {
-#!         // Use your library to set up a visualization.  Example:
-#!         var viz = NEWTOOL.setUpVisualizationInElement( result );
-#!         // Tell your library what to draw.  Example:
-#!         viz.buildVisualizationFromJSON( json );
-#!         // Call the callback when you're done.  Pass the element you were
-#!         // given, plus the visualization you created.
-#!         callback( element, result );
-#!     } );
-#! };
+#!     loadScript('https://cdn.plot.ly/plotly-4.1.1.min.js')
+#!     .then(function() {
+#!        window.Plotly.newPlot(element, json.data);
+#!        callback(element, element.childNodes[0]);
+#!        })
+#!     .catch(function(error) {
+#!        console.error('Could not load Plotly:', error);
+#!      })
 #! @EndLog
 #! </Item>
 #!   <Item>Optionally, in the <File>lib/js/</File> folder, run the
