@@ -101,7 +101,7 @@ InstallGlobalFunction( RunJavaScript, function ( script, returnHTML... )
             application\/javascript := Concatenation(
                 # use newlines to prevent // comments from harming code
                 "( function ( element ) {\n", script,
-                "\n} )( element.get( 0 ) )"
+                "\n} )( element )"
             )
         ), rec(
             application\/javascript := ""
@@ -160,9 +160,6 @@ function ( toolName, functionBody, CDNURL... )
     else
         template := "template-for-viz-tools-with-cdn";
         record.toolString := GapToJsonString( toolName );
-        if EndsWith( CDNURL, ".js" ) then
-            CDNURL := CDNURL{[1..Length(CDNURL)-3]};
-        fi;
         record.CDNURL := GapToJsonString( CDNURL );
     fi;
     return InstallVisualizationTool( toolName,
@@ -211,15 +208,14 @@ function ( libraries, jsCode, returnHTML... )
         libraries := [ libraries ];
     fi;
     if PlotDisplayMethod = PlotDisplayMethod_Jupyter then
-        result := jsCode;
-        for library in Reversed( libraries ) do
-            result := JUPVIZFillInJavaScriptTemplate( "using-library",
-                rec( library := GapToJsonString( library ),
-                     runThis := result ) );
+        result := "";
+        for library in libraries do
+            result := Concatenation( result,
+                LoadJavaScriptFile( library ), "\n" );
         od;
-        return CallFuncList( JUPVIZRunJavaScriptFromTemplate,
-            Concatenation( [ "using-runGAP", rec( runThis := result ) ],
-                returnHTML ) );
+        result := Concatenation( result, jsCode );
+        return CallFuncList( RunJavaScript,
+            Concatenation( [ result ], returnHTML ) );
     else
         result := "if ( !window.JUPVIZLibs ) window.JUPVIZLibs = { };\n";
         for library in libraries do
